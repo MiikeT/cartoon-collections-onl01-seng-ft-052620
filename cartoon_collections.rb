@@ -22,10 +22,10 @@ def find_the_cheese(array)# code an argument here
   cheese_types = ["cheddar", "gouda", "camembert"]
   result = []
   array.each_with_index do |ingredient|
-    if cheese_types.include?(ingredient)
-      result << ingredient
-    else
+    if !cheese_types.include?(ingredient)
       return nil
+    else
+      result << ingredient
     end
   end
   result.join
